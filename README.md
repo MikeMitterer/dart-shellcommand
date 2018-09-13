@@ -50,6 +50,3 @@ Another example can be found on [GitHub](https://github.com/MikeMitterer/dart-sh
     governing permissions and limitations under the License.
     
     
-[1]: https://raw.githubusercontent.com/MikeMitterer/dart-l10n-gettext/master/doc/_resources/screenshot.png
-[2]: https://github.com/MikeMitterer/dart-l10n-gettext/issues
-
