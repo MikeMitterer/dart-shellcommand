@@ -1,0 +1,32 @@
+pipeline {
+    agent {
+        label 'linux'
+    }
+    stages {
+        stage('Prepare') {
+            steps {
+                timeout(time: 15, unit: 'MINUTES') {
+                    ansiColor('xterm') {
+                        sh 'pub update'
+                    }
+                }
+            }
+        }
+        stage('Analyze') {
+            steps {
+                ansiColor('xterm') {
+                    sh 'dartanalyzer bin/'
+                    sh 'dartanalyzer lib/'
+                }
+            }
+        }
+        stage('Test') {
+            steps {
+                ansiColor('xterm') {
+                    sh 'pub run build_runner test'
+                }
+            }
+        }
+    }
+}
+                       

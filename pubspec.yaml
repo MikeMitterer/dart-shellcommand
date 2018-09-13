@@ -1,0 +1,31 @@
+name: shellcommand
+version: 0.1.0
+
+author: Mike Mitterer  <office@mikemitterer.at>
+description: Helper for calling system binaries
+#homepage: https://github.com/MikeMitterer/dart-l10n-gettext
+
+environment:
+  sdk: ">=2.0.0 <3.0.0"
+
+dependencies:
+  logging: '>=0.11.3 <1.0.0'
+
+  validate: ^1.0.0
+
+  args: ^1.4.0
+
+  # which: "^0.1.3"
+  where: ^4.3.0
+
+dev_dependencies:
+  test: any
+
+  console_log_handler: '>=1.1.0 <2.0.0'
+  # path: /Volumes/Daten/DevLocal/DevDart/ConsoleLogHandler
+
+  build_runner: any
+  build_test: any
+  build_web_compilers: any
+
+
