@@ -1,5 +1,5 @@
 name: shellcommand
-version: 0.1.0
+version: 0.1.1
 
 author: Mike Mitterer  <office@mikemitterer.at>
 description: Helper for calling system binaries
