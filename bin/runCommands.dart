@@ -2,18 +2,8 @@ library shellcommand.app;
 
 import 'dart:io';
 import 'dart:async';
-import 'dart:convert';
-import 'dart:math';
 
-import 'package:args/args.dart';
-import 'package:yaml/yaml.dart' as yaml;
-import 'package:validate/validate.dart';
 import 'package:where/where.dart';
-
-
-import 'package:logging/logging.dart';
-import 'package:console_log_handler/print_log_handler.dart';
-
 import 'package:shellcommand/shellcommand.dart';
 
 class LS extends ShellCommand {
