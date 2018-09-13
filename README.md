@@ -1,8 +1,36 @@
 # shellcommand
-> Helper for executing commands on the commandline 
+> Helper for executing commands on the commandline
+
+## Usage
+
+```dart
+class Git extends ShellCommand {
+    Git() : super("git");
+}
+
+void main(List<String> arguments) async {
+    final git = Git();
+    
+    if(!(await git.exists)) {
+        print("git is not installed - please install it via 'apt install git'!");
+        return;
+    }
+
+    final result = await git.run([ "--help" ]);
+    if(result.exitCode != 0) {
+        print("ExitCode: ${exitCode}!");
+        print(result.stderr);
+    } else {
+        print(result.stdout);
+    }
+}
+``` 
+
+Another example can be found on [GitHub](https://github.com/MikeMitterer/dart-shellcommand/blob/master/bin/runCommands.dart)
+
 
 ## If you have problems
-* [Issues][2]
+* [Issues](https://github.com/MikeMitterer/dart-shellcommand/issues)
 
 ### License
 

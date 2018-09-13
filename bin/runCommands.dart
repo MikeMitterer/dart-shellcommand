@@ -60,6 +60,11 @@ void main(List<String> arguments) async {
 
     print("Testing commands:");
 
+    if(!(await fake.exists)) {
+        print("Does not exists!");
+        return;
+    }
+    
     await Future.forEach(commands.values, (final ShellCommand command) async {
         String exe = "not installed";
 
